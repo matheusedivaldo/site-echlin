@@ -1,0 +1,59 @@
+:root {
+  /* Paleta de marca */
+  --color-orange: #f47026;
+  --color-orange-dark: #d85a15;
+  --color-blue: #154999;
+  --color-blue-dark: #0e3573;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-neutral: #ede9e7;
+
+  /* Texto */
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-text-inverse: #ffffff;
+
+  /* Feedback */
+  --color-success: #1f8a3b;
+  --color-error: #c0392b;
+
+  /* Tipografia */
+  --font-family-base:
+    'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.25rem;
+  --font-size-3xl: 3rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.55;
+
+  /* Espaçamento */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+
+  /* Layout */
+  --container-max: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Efeitos */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.14);
+  --transition-base: 0.2s ease;
+}

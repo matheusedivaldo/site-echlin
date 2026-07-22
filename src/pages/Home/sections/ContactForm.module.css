@@ -1,0 +1,33 @@
+.section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.submit {
+  align-self: flex-start;
+  margin-top: var(--space-xs);
+}
+
+.success {
+  color: var(--color-success);
+  font-weight: var(--font-weight-medium);
+  background-color: rgba(31, 138, 59, 0.1);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 480px) {
+  .submit {
+    align-self: stretch;
+  }
+}

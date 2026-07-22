@@ -1,0 +1,8 @@
+[
+  { "label": "Início", "path": "/" },
+  { "label": "Interruptores", "path": "/produtos/interruptores-automotivos" },
+  { "label": "Cabos de Vela", "path": "/produtos/cabos-de-vela" },
+  { "label": "Sensores", "path": "/produtos/sensores-de-temperatura" },
+  { "label": "Sobre", "path": "/sobre" },
+  { "label": "Contato", "path": "/#contato" }
+]

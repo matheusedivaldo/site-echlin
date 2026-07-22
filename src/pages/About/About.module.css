@@ -1,0 +1,30 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--color-neutral);
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.content {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.contentInner {
+  max-width: 720px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.paragraph {
+  font-size: var(--font-size-md);
+}

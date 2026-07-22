@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "interruptores-automotivos",
+    "title": "Interruptores Automotivos",
+    "subtitle": "Tecnologia de montadora original para ignição confiável",
+    "cardDescription": "Tecnologia, segurança e o portfólio que as montadoras recomendam.",
+    "description": "Os interruptores Echlin são projetados para condições extremas de operação, usando materiais de alta especificação que entregam performance superior e durabilidade expressiva. A confiabilidade é reforçada por controle de qualidade rigoroso e décadas de confiança do mercado.",
+    "benefits": [
+      "Mais segurança — contatos protegidos contra oxidação",
+      "Maior durabilidade — componentes de alta resistência",
+      "Peças 100% testadas — controle rigoroso de qualidade",
+      "Mais de 20 aplicações exclusivas no portfólio",
+      "Entrega rápida em todo o Brasil",
+      "Suporte técnico especializado",
+      "Garantia de qualidade original"
+    ],
+    "image": "interruptores-automotivos.png",
+    "catalogUrl": "/catalogos/Catalogo-Echlin-Interruptores-e-Sensores.pdf",
+    "searchUrl": "https://buscanarede.com.br/echlinbrasil/produtos?s=interruptor"
+  },
+  {
+    "slug": "cabos-de-vela",
+    "title": "Cabos de Vela",
+    "subtitle": "Tecnologia original das principais montadoras",
+    "cardDescription": "Produzidos com materiais de ponta que garantem durabilidade e resistência superiores.",
+    "description": "Os cabos de vela Echlin são produzidos com materiais de ponta que garantem alta eficiência e resistência superior. O portfólio atende veículos leves e pesados, nacionais e importados, com garantia de qualidade equivalente à original.",
+    "benefits": [
+      "Partida rápida em qualquer temperatura",
+      "Redução no consumo de combustível",
+      "Menor emissão de poluentes",
+      "Ignição precisa e potente",
+      "Durabilidade superior aos cabos convencionais",
+      "Testados em condições extremas",
+      "Tecnologia usada pelas principais montadoras"
+    ],
+    "image": "cabos-de-vela.png",
+    "catalogUrl": "/catalogos/Catalogo-Cabos-de-Ignicao-2025.pdf",
+    "searchUrl": "https://buscanarede.com.br/echlinbrasil/produtos?s=cabo"
+  },
+  {
+    "slug": "sensores-de-temperatura",
+    "title": "Sensores de Temperatura",
+    "subtitle": "Medição precisa. Proteção total do motor.",
+    "cardDescription": "Produzidos com materiais de ponta que garantem durabilidade e resistência superiores.",
+    "description": "Os sensores de temperatura Echlin utilizam tecnologia de ponta para garantir leituras exatas e resposta imediata, fabricados com materiais premium em conformidade com rigorosas especificações técnicas.",
+    "benefits": [
+      "Pino de segurança contra instalação incorreta",
+      "Peças 100% testadas com controle rigoroso",
+      "Reforço estrutural dos condutores para durabilidade",
+      "Portfólio completo para veículos nacionais e importados",
+      "Resposta rápida com leitura precisa em tempo real",
+      "Proteção contra superaquecimento do motor",
+      "Ignição otimizada e economia de combustível"
+    ],
+    "image": "sensores-de-temperatura.png",
+    "catalogUrl": "/catalogos/Catalogo-Echlin-Interruptores-e-Sensores.pdf",
+    "searchUrl": "https://buscanarede.com.br/echlinbrasil/produtos?s=sensor"
+  }
+]

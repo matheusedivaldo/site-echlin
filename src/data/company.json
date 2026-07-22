@@ -1,0 +1,25 @@
+{
+  "name": "Echlin do Brasil",
+  "tagline": "A confiança que atravessa gerações",
+  "heroTitle": "Echlin — A Confiança que Atravessa Gerações",
+  "heroSubtitle": "A qualidade que garante o seu serviço",
+  "address": {
+    "street": "Rua Toribaté, 55",
+    "district": "Ipiranga",
+    "city": "São Paulo",
+    "state": "SP"
+  },
+  "phone": "11930522296",
+  "email": "j.mendes@echlinbrasil.com.br",
+  "about": {
+    "title": "Mais de 50 anos de confiança",
+    "paragraphs": [
+      "Há mais de 50 anos a Echlin tem sido, na opinião dos mecânicos, um símbolo de confiança e qualidade que passa de geração em geração — e que agora está de volta para fortalecer a sua oficina.",
+      "O tempo não apaga a reputação conquistada: a marca é referência histórica no segmento de autopeças e oferece qualidade e confiança para a execução de um reparo bem feito, sem retrabalho."
+    ]
+  },
+  "partnerCta": {
+    "title": "Seja um parceiro Echlin",
+    "text": "Leve para a sua distribuidora ou loja de autopeças uma marca de alta aceitação no mercado, com grande potencial de giro e condições comerciais flexíveis."
+  }
+}
