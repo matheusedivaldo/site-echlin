@@ -1,10 +1,13 @@
-import { BrowserRouter } from 'react-router-dom';
-import { AppRoutes } from '@/router/AppRoutes';
+import { Navbar } from '@/components/Navbar/Navbar';
+import { Hero } from '@/components/Hero/Hero';
 
 export function App() {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }

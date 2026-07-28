@@ -8,8 +8,10 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
   color: var(--color-black);
 }
 
@@ -21,10 +23,6 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
-h3 {
-  font-size: var(--font-size-lg);
-}
-
 p {
   color: var(--color-text-muted);
 }
@@ -32,9 +30,5 @@ p {
 @media (max-width: 640px) {
   h1 {
     font-size: var(--font-size-2xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-xl);
   }
 }
