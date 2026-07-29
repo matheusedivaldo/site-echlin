@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Zap, ToggleLeft, Thermometer, CheckCircle2, ArrowRight } from 'lucide-react';
 import products from '@/data/products.json';
 import image01 from '@/assets/images/01.png';
@@ -12,13 +12,30 @@ const ICONS = {
   'interruptores-automotivos': ToggleLeft,
   'sensores-de-temperatura': Thermometer,
 };
+const AUTOPLAY_DELAY = 6000;
 
 export function Products() {
-  const [activeSlug, setActiveSlug] = useState(products[0].slug);
-  const active = products.find((product) => product.slug === activeSlug);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const active = products[activeIndex];
+
+  useEffect(() => {
+    if (isPaused) return undefined;
+
+    const timer = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % products.length);
+    }, AUTOPLAY_DELAY);
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
   return (
-    <section id="produtos" className={styles.section}>
+    <section
+      id="produtos"
+      className={styles.section}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className={styles.inner}>
         <div className={styles.heading}>
           <span className={styles.eyebrow}>Portfólio Echlin</span>
@@ -26,9 +43,9 @@ export function Products() {
         </div>
 
         <div className={styles.tabs} role="tablist">
-          {products.map((product) => {
+          {products.map((product, index) => {
             const Icon = ICONS[product.slug];
-            const isActive = product.slug === activeSlug;
+            const isActive = index === activeIndex;
             return (
               <button
                 key={product.slug}
@@ -36,7 +53,7 @@ export function Products() {
                 role="tab"
                 aria-selected={isActive}
                 className={`${styles.tab} ${isActive ? styles.tabActive : ''}`}
-                onClick={() => setActiveSlug(product.slug)}
+                onClick={() => setActiveIndex(index)}
               >
                 <Icon size={18} strokeWidth={2} />
                 {product.title.replace(' Echlin', '')}
@@ -47,14 +64,12 @@ export function Products() {
 
         <div className={styles.panel}>
           <div className={styles.imageWrapper}>
-            {products.map((product) => (
+            {products.map((product, index) => (
               <img
                 key={product.slug}
                 src={IMAGES[product.image]}
                 alt={product.title}
-                className={`${styles.image} ${
-                  product.slug === activeSlug ? styles.imageActive : ''
-                }`}
+                className={`${styles.image} ${index === activeIndex ? styles.imageActive : ''}`}
               />
             ))}
           </div>
