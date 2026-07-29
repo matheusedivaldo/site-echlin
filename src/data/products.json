@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "cabos-de-vela",
+    "title": "Cabos de Vela Echlin",
+    "subtitle": "Tecnologia Original das Principais Montadoras",
+    "image": "01.png",
+    "tagline": "Referência mundial em ignição automotiva",
+    "description": "Os cabos de vela Echlin são produzidos com materiais de ponta que garantem alta eficiência e resistência superior. Certificação RoHS e testados para máxima performance em qualquer condição.",
+    "benefits": [
+      "Partida rápida em qualquer temperatura",
+      "Redução no consumo de combustível",
+      "Menor emissão de poluentes",
+      "Ignição precisa e potente",
+      "Durabilidade 3x superior aos cabos convencionais"
+    ],
+    "extra": {
+      "title": "Por que escolher Echlin?",
+      "items": [
+        "Certificação internacional RoHS",
+        "Testados nas condições mais extremas",
+        "Tecnologia usada pelas principais montadoras",
+        "Garantia de desempenho e durabilidade"
+      ]
+    },
+    "note": "Nosso portfólio atende veículos leves, pesados, nacionais e importados, com certificação RoHS e garantia de qualidade original."
+  },
+  {
+    "slug": "interruptores-automotivos",
+    "title": "Interruptores Automotivos Echlin",
+    "subtitle": "Tecnologia de Montadora Original para Ignição Confiável",
+    "image": "02.png",
+    "tagline": "Desenvolvidos para nunca decepcionar",
+    "description": "Nossos interruptores são projetados para operar em condições extremas. Fabricados com materiais de alta especificação técnica, garantem desempenho superior e durabilidade que impressiona.",
+    "benefits": [
+      "Mais segurança — contatos protegidos contra oxidação",
+      "Maior durabilidade — componentes de alta resistência",
+      "Peças 100% testadas — controle rigoroso de qualidade",
+      "Reforçados com os melhores materiais do mercado",
+      "Portfólio completo — mais de 20 aplicações exclusivas"
+    ],
+    "extra": {
+      "title": "Experimente a diferença Echlin",
+      "items": [
+        "Mais de 20 aplicações exclusivas",
+        "Entrega rápida para todo o Brasil",
+        "Suporte técnico especializado",
+        "Garantia de qualidade original"
+      ]
+    },
+    "note": null
+  },
+  {
+    "slug": "sensores-de-temperatura",
+    "title": "Sensores de Temperatura Echlin",
+    "subtitle": "Medição Precisa. Proteção Total do Motor.",
+    "image": "03.png",
+    "tagline": "A precisão que protege seu motor",
+    "description": "Os sensores de temperatura Echlin são desenvolvidos com tecnologia de ponta para garantir leituras exatas e resposta imediata, com materiais premium em conformidade com rigorosas especificações técnicas.",
+    "benefits": [
+      "Pino de segurança — proteção contra instalação incorreta",
+      "Peças 100% testadas — controle rigoroso de qualidade",
+      "Reforço estrutural dos condutores — durabilidade superior",
+      "Portfólio completo — ampla cobertura para nacionais e importados",
+      "Resposta rápida — leitura precisa em tempo real"
+    ],
+    "extra": {
+      "title": "Sensores que protegem o que mais importa",
+      "items": [
+        "Proteção contra superaquecimento",
+        "Ignição otimizada e economia de combustível",
+        "Diagnóstico preciso de problemas",
+        "Redução de custos com manutenção preventiva",
+        "Performance ideal em qualquer condição"
+      ]
+    },
+    "note": null
+  }
+]

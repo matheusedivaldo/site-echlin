@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Hero } from '@/components/Hero/Hero';
+import { Products } from '@/components/Products/Products';
 
 export function App() {
   return (
@@ -7,6 +8,7 @@ export function App() {
       <Navbar />
       <main>
         <Hero />
+        <Products />
       </main>
     </>
   );
