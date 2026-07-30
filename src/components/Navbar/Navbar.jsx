@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, ArrowRight } from 'lucide-react';
 import logo from '@/assets/logo/logo.svg';
 import styles from './Navbar.module.css';
@@ -13,17 +13,27 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
       <div className={styles.topBar}>
         <div className={styles.topBarInner}>
           <a href="tel:+5511930522296" className={styles.topBarItem}>
-            <Phone size={14} strokeWidth={2.25} />
+            <Phone size={14} strokeWidth={2.5} />
             (11) 93052-2296
           </a>
           <a href="mailto:contato@echlinbrasil.com.br" className={styles.topBarItem}>
-            <Mail size={14} strokeWidth={2.25} />
+            <Mail size={14} strokeWidth={2.5} />
             contato@echlinbrasil.com.br
           </a>
         </div>
@@ -53,7 +63,7 @@ export function Navbar() {
 
           <a href="#contato" className={styles.ctaDesktop}>
             Fale Conosco
-            <ArrowRight size={16} strokeWidth={2.5} className={styles.ctaIcon} />
+            <ArrowRight size={18} strokeWidth={2.5} className={styles.ctaIcon} />
           </a>
 
           <button
