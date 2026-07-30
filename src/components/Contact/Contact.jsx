@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Phone, Mail, Send } from 'lucide-react';
 import social from '@/data/social.json';
 import { SocialIcon } from '@/components/SocialIcon/SocialIcon';
@@ -43,8 +43,28 @@ function buildMailtoUrl(values) {
 }
 
 export function Contact() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
   const [values, setValues] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const element = sectionRef.current;
+    if (!element) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -64,11 +84,15 @@ export function Contact() {
   }
 
   return (
-    <section id="contato" className={styles.section}>
+    <section
+      id="contato"
+      ref={sectionRef}
+      className={`${styles.section} ${isVisible ? styles.visible : ''}`}
+    >
       <div className={styles.inner}>
-        <div className={styles.info}>
+        <div className={`${styles.info} ${styles.animItem}`}>
           <span className={styles.eyebrow}>Fale com a gente</span>
-          <h2 className={styles.title}>Vamos conversar sobre a sua oficina?</h2>
+          <h2 className={styles.title}>Vamos conversar?</h2>
           <p className={styles.description}>
             Tire dúvidas, peça uma cotação ou converse com o time comercial. Respondemos rápido
             por qualquer um dos canais abaixo.
@@ -77,13 +101,17 @@ export function Contact() {
           <ul className={styles.channels}>
             <li>
               <a href="tel:+5511930522296" className={styles.channel}>
-                <Phone size={18} strokeWidth={2} />
+                <span className={styles.iconWrapper}>
+                  <Phone size={18} strokeWidth={2.5} />
+                </span>
                 (11) 93052-2296
               </a>
             </li>
             <li>
               <a href="mailto:contato@echlinbrasil.com.br" className={styles.channel}>
-                <Mail size={18} strokeWidth={2} />
+                <span className={styles.iconWrapper}>
+                  <Mail size={18} strokeWidth={2.5} />
+                </span>
                 contato@echlinbrasil.com.br
               </a>
             </li>
@@ -95,7 +123,7 @@ export function Contact() {
             rel="noopener noreferrer"
             className={styles.whatsappButton}
           >
-            <SocialIcon id="whatsapp" size={18} />
+            <SocialIcon id="whatsapp" size={20} />
             Chamar no WhatsApp
           </a>
 
@@ -115,7 +143,11 @@ export function Contact() {
           </div>
         </div>
 
-        <form className={styles.form} onSubmit={handleSubmit} noValidate>
+        <form 
+          className={`${styles.form} ${styles.animItem} ${styles.delay1}`} 
+          onSubmit={handleSubmit} 
+          noValidate
+        >
           <div className={styles.field}>
             <label htmlFor="contact-name" className={styles.label}>
               Nome *
@@ -198,7 +230,7 @@ export function Contact() {
 
           <button type="submit" className={styles.submit}>
             Enviar mensagem
-            <Send size={16} strokeWidth={2.5} />
+            <Send size={18} strokeWidth={2.5} className={styles.submitIcon} />
           </button>
         </form>
       </div>
