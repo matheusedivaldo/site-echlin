@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Hero } from '@/components/Hero/Hero';
 import { Products } from '@/components/Products/Products';
+import { Catalogs } from '@/components/Catalogs/Catalogs';
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <main>
         <Hero />
         <Products />
+        <Catalogs />
       </main>
     </>
   );
