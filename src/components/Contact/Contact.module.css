@@ -1,0 +1,217 @@
+.section {
+  padding: var(--space-2xl) var(--space-md);
+  background-color: var(--color-neutral);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-sm);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.35rem 0.9rem;
+  background-color: rgba(21, 73, 153, 0.1);
+  color: var(--color-blue);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+}
+
+.description {
+  font-size: var(--font-size-md);
+  max-width: 440px;
+}
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: var(--space-xs);
+}
+
+.channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+.channel:hover {
+  color: var(--color-blue);
+}
+
+.channel svg {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  margin-top: var(--space-xs);
+  background-color: #25d366;
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.whatsappButton:hover {
+  background-color: #1ebd5a;
+  box-shadow: var(--shadow-md);
+}
+
+.social {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: var(--space-sm);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(21, 73, 153, 0.08);
+  color: var(--color-blue);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.socialLink:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #d9d5d2;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  resize: vertical;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(21, 73, 153, 0.15);
+}
+
+.inputError {
+  border-color: var(--color-error, #c0392b);
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #c0392b;
+  font-weight: var(--font-weight-medium);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  margin-top: var(--space-xs);
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.submit:hover {
+  background-color: var(--color-orange-dark);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+}

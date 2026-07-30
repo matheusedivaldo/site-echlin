@@ -1,5 +1,6 @@
 .section {
   padding: var(--space-2xl) var(--space-md);
+  background-color: var(--color-neutral);
 }
 
 .inner {
@@ -36,7 +37,7 @@
   display: flex;
   gap: var(--space-sm);
   overflow-x: auto;
-  border-bottom: 1px solid #ece8e5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: var(--space-xl);
 }
 
@@ -73,9 +74,10 @@
 .imageWrapper {
   position: relative;
   aspect-ratio: 1 / 1;
-  background-color: var(--color-neutral);
+  background-color: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .image {

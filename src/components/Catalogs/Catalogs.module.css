@@ -1,5 +1,6 @@
 .section {
   padding: var(--space-2xl) var(--space-md);
+  background-color: var(--color-white);
 }
 
 .inner {

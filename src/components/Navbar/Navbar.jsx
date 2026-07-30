@@ -5,8 +5,9 @@ import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
   { label: 'Início', href: '#inicio' },
-  { label: 'Produtos', href: '#produtos' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'Produtos', href: '#produtos' },
+  { label: 'Catálogos', href: '#catalogos' },
   { label: 'Contato', href: '#contato' },
 ];
 
