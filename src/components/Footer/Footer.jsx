@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Phone, Mail } from 'lucide-react';
 import social from '@/data/social.json';
 import { SocialIcon } from '@/components/SocialIcon/SocialIcon';
@@ -14,11 +15,31 @@ const NAV_LINKS = [
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const footerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = footerRef.current;
+    if (!element) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <footer className={styles.footer}>
+    <footer ref={footerRef} className={`${styles.footer} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.inner}>
-        <div className={styles.brand}>
+        <div className={`${styles.brand} ${styles.animItem}`}>
           <img src={logo} alt="Echlin do Brasil" className={styles.logo} />
           <p className={styles.tagline}>A confiança que atravessa gerações.</p>
           <div className={styles.social}>
@@ -31,13 +52,13 @@ export function Footer() {
                 aria-label={item.label}
                 className={styles.socialLink}
               >
-                <SocialIcon id={item.id} size={18} />
+                <SocialIcon id={item.id} size={20} />
               </a>
             ))}
           </div>
         </div>
 
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.animItem} ${styles.delay1}`}>
           <h3 className={styles.columnTitle}>Navegação</h3>
           <ul className={styles.list}>
             {NAV_LINKS.map((link) => (
@@ -50,18 +71,22 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.animItem} ${styles.delay2}`}>
           <h3 className={styles.columnTitle}>Contato</h3>
           <ul className={styles.list}>
             <li>
               <a href="tel:+5511930522296" className={styles.link}>
-                <Phone size={16} strokeWidth={2} />
+                <span className={styles.iconWrapper}>
+                  <Phone size={18} strokeWidth={2} />
+                </span>
                 (11) 93052-2296
               </a>
             </li>
             <li>
               <a href="mailto:contato@echlinbrasil.com.br" className={styles.link}>
-                <Mail size={16} strokeWidth={2} />
+                <span className={styles.iconWrapper}>
+                  <Mail size={18} strokeWidth={2} />
+                </span>
                 contato@echlinbrasil.com.br
               </a>
             </li>
