@@ -42,24 +42,26 @@ export function Products() {
           <h2 className={styles.title}>A mesma tecnologia das montadoras, na sua oficina</h2>
         </div>
 
-        <div className={styles.tabs} role="tablist">
-          {products.map((product, index) => {
-            const Icon = ICONS[product.slug];
-            const isActive = index === activeIndex;
-            return (
-              <button
-                key={product.slug}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                className={`${styles.tab} ${isActive ? styles.tabActive : ''}`}
-                onClick={() => setActiveIndex(index)}
-              >
-                <Icon size={18} strokeWidth={2} />
-                {product.title.replace(' Echlin', '')}
-              </button>
-            );
-          })}
+        <div className={styles.tabsWrapper}>
+          <div className={styles.tabs} role="tablist">
+            {products.map((product, index) => {
+              const Icon = ICONS[product.slug];
+              const isActive = index === activeIndex;
+              return (
+                <button
+                  key={product.slug}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`${styles.tab} ${isActive ? styles.tabActive : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <Icon size={20} strokeWidth={isActive ? 2.5 : 2} />
+                  <span>{product.title.replace(' Echlin', '')}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <div className={styles.panel}>
@@ -74,14 +76,16 @@ export function Products() {
             ))}
           </div>
 
-          <div className={styles.details}>
-            <span className={styles.subtitle}>{active.subtitle}</span>
-            <p className={styles.description}>{active.description}</p>
+          <div key={active.slug} className={styles.details}>
+            <div className={styles.detailsHeader}>
+              <span className={styles.subtitle}>{active.subtitle}</span>
+              <p className={styles.description}>{active.description}</p>
+            </div>
 
             <ul className={styles.benefits}>
               {active.benefits.slice(0, 4).map((benefit) => (
                 <li key={benefit} className={styles.benefit}>
-                  <CheckCircle2 size={18} strokeWidth={2} />
+                  <CheckCircle2 size={20} strokeWidth={2.5} />
                   <span>{benefit}</span>
                 </li>
               ))}
@@ -89,7 +93,7 @@ export function Products() {
 
             <a href="#contato" className={styles.link}>
               Falar sobre esse produto
-              <ArrowRight size={16} strokeWidth={2.5} />
+              <ArrowRight size={18} strokeWidth={2.5} className={styles.linkIcon} />
             </a>
           </div>
         </div>
