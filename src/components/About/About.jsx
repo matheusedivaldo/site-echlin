@@ -35,7 +35,7 @@ export function About() {
           observer.disconnect();
         }
       },
-      { threshold: 0.25 },
+      { threshold: 0.25 }
     );
 
     observer.observe(element);
@@ -79,7 +79,7 @@ export function About() {
           {FEATURES.map(({ icon: Icon, title, description }) => (
             <div key={title} className={styles.feature}>
               <span className={styles.featureIcon}>
-                <Icon size={20} strokeWidth={2} />
+                <Icon size={24} strokeWidth={2} />
               </span>
               <h3 className={styles.featureTitle}>{title}</h3>
               <p className={styles.featureDescription}>{description}</p>
