@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import styles from './Hero.module.css';
+import interruptoresImage from '../../assets/images/hero-interruptores.png';
+import cabosVelaImage from '../../assets/images/hero-cabos-vela.png';
+import sensoresImage from '../../assets/images/hero-sensores-temperatura.png';
 
 const SLIDES = [
   {
-    image:
-      'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80',
+    image: interruptoresImage,
     title: 'Interruptores Automotivos',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80',
+    image: cabosVelaImage,
     title: 'Cabos de Vela',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80',
+    image: sensoresImage,
     title: 'Sensores de Temperatura',
   },
 ];
