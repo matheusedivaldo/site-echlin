@@ -1,25 +1,25 @@
-import { Navbar } from '@/components/Navbar/Navbar';
-import { Hero } from '@/components/Hero/Hero';
-import { About } from '@/components/About/About';
-import { Products } from '@/components/Products/Products';
-import { Catalogs } from '@/components/Catalogs/Catalogs';
-import { Contact } from '@/components/Contact/Contact';
-import { Footer } from '@/components/Footer/Footer';
-import { FloatingWhatsApp } from '@/components/FloatingWhatsApp/FloatingWhatsApp';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { MainLayout } from '@/layouts/MainLayout/MainLayout';
+import { Home } from '@/pages/Home/Home';
+import { Sobre } from '@/pages/Sobre/Sobre';
+import { Produtos } from '@/pages/Produtos/Produtos';
+import { Catalogos } from '@/pages/Catalogos/Catalogos';
+import { Contato } from '@/pages/Contato/Contato';
+import { NotFound } from '@/pages/NotFound/NotFound';
 
 export function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Products />
-        <Catalogs />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/produtos" element={<Produtos />} />
+          <Route path="/catalogos" element={<Catalogos />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

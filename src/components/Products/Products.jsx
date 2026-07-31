@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Zap, ToggleLeft, Thermometer, CheckCircle2, ArrowRight } from 'lucide-react';
 import products from '@/data/products.json';
 import image01 from '@/assets/images/01.png';
@@ -91,10 +92,10 @@ export function Products() {
               ))}
             </ul>
 
-            <a href="#contato" className={styles.link}>
+            <Link to="/contato" className={styles.link}>
               Falar sobre esse produto
               <ArrowRight size={18} strokeWidth={2.5} className={styles.linkIcon} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

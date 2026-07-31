@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ArrowRight } from 'lucide-react';
 import logo from '@/assets/logo/logo.svg';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Produtos', href: '#produtos' },
-  { label: 'Catálogos', href: '#catalogos' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Início', to: '/' },
+  { label: 'Sobre', to: '/sobre' },
+  { label: 'Produtos', to: '/produtos' },
+  { label: 'Catálogos', to: '/catalogos' },
+  { label: 'Contato', to: '/contato' },
 ];
 
 export function Navbar() {
@@ -41,30 +42,30 @@ export function Navbar() {
 
       <div className={styles.nav}>
         <div className={styles.navInner}>
-          <a href="#inicio" className={styles.logoLink} onClick={() => setIsMenuOpen(false)}>
+          <Link to="/" className={styles.logoLink} onClick={() => setIsMenuOpen(false)}>
             <img src={logo} alt="Echlin do Brasil" className={styles.logo} />
-          </a>
+          </Link>
 
           <nav className={`${styles.links} ${isMenuOpen ? styles.linksOpen : ''}`}>
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.to}
+                to={link.to}
                 className={styles.link}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a href="#contato" className={styles.ctaMobile} onClick={() => setIsMenuOpen(false)}>
+            <Link to="/contato" className={styles.ctaMobile} onClick={() => setIsMenuOpen(false)}>
               Fale Conosco
-            </a>
+            </Link>
           </nav>
 
-          <a href="#contato" className={styles.ctaDesktop}>
+          <Link to="/contato" className={styles.ctaDesktop}>
             Fale Conosco
             <ArrowRight size={18} strokeWidth={2.5} className={styles.ctaIcon} />
-          </a>
+          </Link>
 
           <button
             type="button"

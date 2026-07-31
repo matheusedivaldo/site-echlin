@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import styles from './Hero.module.css';
 import interruptoresImage from '../../assets/images/hero-interruptores.png';
@@ -51,13 +52,13 @@ export function Hero() {
           </p>
 
           <div className={`${styles.actions} ${styles.animItem} ${styles.delay3}`}>
-            <a href="#produtos" className={styles.primaryButton}>
+            <Link to="/produtos" className={styles.primaryButton}>
               Explorar Produtos
               <ArrowRight size={20} strokeWidth={2.5} className={styles.buttonIcon} />
-            </a>
-            <a href="#contato" className={styles.secondaryLink}>
+            </Link>
+            <Link to="/contato" className={styles.secondaryLink}>
               Fale com um especialista
-            </a>
+            </Link>
           </div>
 
           <p className={`${styles.trustLine} ${styles.animItem} ${styles.delay4}`}>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
 import social from '@/data/social.json';
 import { SocialIcon } from '@/components/SocialIcon/SocialIcon';
@@ -6,11 +7,11 @@ import logo from '@/assets/logo/logo-white.svg';
 import styles from './Footer.module.css';
 
 const NAV_LINKS = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Produtos', href: '#produtos' },
-  { label: 'Catálogos', href: '#catalogos' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Início', to: '/' },
+  { label: 'Sobre', to: '/sobre' },
+  { label: 'Produtos', to: '/produtos' },
+  { label: 'Catálogos', to: '/catalogos' },
+  { label: 'Contato', to: '/contato' },
 ];
 
 export function Footer() {
@@ -62,10 +63,10 @@ export function Footer() {
           <h3 className={styles.columnTitle}>Navegação</h3>
           <ul className={styles.list}>
             {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className={styles.link}>
+              <li key={link.to}>
+                <Link to={link.to} className={styles.link}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
